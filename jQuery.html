@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>    
+    <body>
+
+        <p id="a"> ELEMENT </p>
+
+    </body>
+    <script>
+
+        $(document).ready(function(){ // $ = jQuery, they are the same
+            $("html").append( //Grabs HTML tag and when everything is loaded, execute this function
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph1</p>\
+                            <p id='2'>Paragraph2</p>\
+                            <p id='3'>Paragraph3</p>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            $("#2").css({"color":"red"}); //Grabs the Id=2 and changes it's color
+            $("#3").click (function() {
+                $("h1").hide(1000); // on the click of id=3, h1 element hides/invisible, 1000 is how long it takes for the element to hide
+            
+            $("#1").click (function(){
+                $("h1").show(500);
+            })
+            })
+        });
+        
+    
+
+    </script>
+
+</html>
